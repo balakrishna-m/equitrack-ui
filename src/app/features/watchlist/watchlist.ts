@@ -4,6 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-watchlist',
   imports: [],
   templateUrl: './watchlist.html',
-  styleUrl: './watchlist.scss',
+  styleUrls: ['./watchlist.scss'],
 })
 export class Watchlist {}

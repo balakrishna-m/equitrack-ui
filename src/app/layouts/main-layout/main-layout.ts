@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-main-layout',
@@ -10,9 +10,10 @@ import { RouterOutlet } from '@angular/router';
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
-    RouterOutlet],
+    RouterOutlet,
+    RouterLink],
   templateUrl: './main-layout.html',
-  styleUrl: './main-layout.scss',
+  styleUrls: ['./main-layout.scss'],
 })
 export class MainLayout {
 }

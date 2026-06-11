@@ -1,0 +1,26 @@
+:host {
+  display: block;
+  min-height: 100vh;
+}
+
+mat-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+mat-sidenav-container {
+  height: calc(100vh - 64px);
+}
+
+mat-sidenav {
+  width: 240px;
+}
+
+mat-sidenav-content {
+  padding: 1rem;
+}
+
+mat-nav-list a {
+  width: 100%;
+}
