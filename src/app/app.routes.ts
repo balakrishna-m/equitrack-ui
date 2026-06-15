@@ -10,53 +10,46 @@ export const routes: Routes = [
   // Public routes
   {
     path: 'login',
-    loadComponent: () =>
-      import('./features/auth/login/login')
-        .then(m => m.Login),
+    loadComponent: () => import('./features/auth/login/login').then((m) => m.Login),
   },
 
   {
     path: 'signup',
-    loadComponent: () =>
-      import('./features/auth/signup/signup')
-        .then(m => m.Signup),
+    loadComponent: () => import('./features/auth/signup/signup').then((m) => m.Signup),
   },
 
   // Protected area (layout)
   {
     path: '',
-    loadComponent: () =>
-      import('./layouts/main-layout/main-layout')
-        .then(m => m.MainLayout),
+    loadComponent: () => import('./layouts/main-layout/main-layout').then((m) => m.MainLayout),
 
     children: [
       {
         path: 'dashboard',
-        loadComponent: () =>
-          import('./features/dashboard/dashboard')
-            .then(m => m.Dashboard),
+        loadComponent: () => import('./features/dashboard/dashboard').then((m) => m.Dashboard),
       },
 
       {
         path: 'portfolio',
-        loadComponent: () =>
-          import('./features/portfolio/portfolio')
-            .then(m => m.Portfolio),
+        loadComponent: () => import('./features/portfolio/portfolio').then((m) => m.Portfolio),
       },
 
       {
         path: 'watchlist',
-        loadComponent: () =>
-          import('./features/watchlist/watchlist')
-            .then(m => m.Watchlist),
+        loadComponent: () => import('./features/watchlist/watchlist').then((m) => m.Watchlist),
       },
 
-    //   {
-    //     path: 'transactions',
-    //     loadComponent: () =>
-    //       import('./features/transactions/transactions')
-    //         .then(m => m.Transactions),
-    //   },
+      {
+        path: 'settings',
+        loadComponent: () => import('./features/settings/settings').then((m) => m.Settings),
+      },
+
+      //   {
+      //     path: 'transactions',
+      //     loadComponent: () =>
+      //       import('./features/transactions/transactions')
+      //         .then(m => m.Transactions),
+      //   },
     ],
   },
 

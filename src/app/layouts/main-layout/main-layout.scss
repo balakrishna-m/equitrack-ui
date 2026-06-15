@@ -7,6 +7,52 @@ mat-toolbar {
   position: sticky;
   top: 0;
   z-index: 2;
+  border-bottom: 1px solid var(--mat-sys-outline-variant);
+  background: var(--mat-sys-surface);
+}
+
+.brand {
+  color: var(--mat-sys-on-surface);
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  text-decoration: none;
+}
+
+.toolbar-spacer {
+  flex: 1 1 auto;
+}
+
+.profile-button {
+  display: grid;
+  place-items: center;
+}
+
+.profile-initials {
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--mat-sys-on-primary-container);
+  background: var(--mat-sys-primary-container);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.profile-summary {
+  display: flex;
+  min-width: 12rem;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--mat-sys-outline-variant);
+}
+
+.profile-summary span {
+  color: var(--mat-sys-on-surface-variant);
+  font-size: 0.75rem;
 }
 
 mat-sidenav-container {
